@@ -206,7 +206,7 @@
         </div>
     </section>
 
-    <!-- TEAM -->
+        <!-- TEAM  (drop-in replacement: replace the whole existing <section class="team" id="team"> ... </section> block) -->
     <section class="team" id="team">
         <div class="container">
             <div class="section-heading">
@@ -219,34 +219,121 @@
             </div>
 
             <div class="team-grid">
+
+                <!-- Mary -->
                 <article class="team-card">
-                    <div class="team-photo">
-                        <img src="Mary.jpg" alt="Mary Thamari">
+                    <div class="team-card__head">
+                        <div class="team-photo">
+                            <img src="Mary.jpg" alt="Dr. Mary Thamari" loading="lazy">
+                        </div>
+                        <div class="team-id">
+                            <h3>Dr. Mary Thamari</h3>
+                            <p class="team-role">Director &amp; Lead Consultant</p>
+                        </div>
                     </div>
-                    <h3>Dr. Mary Thamari</h3>
-                    <p class="team-role">Director</p>
+                    <p class="team-bio">
+                        Social scientist and senior evaluation and gender equality and social inclusion (GESI)
+                        specialist with 15+ years leading theory-based, mixed-methods evaluations across 20+
+                        countries in Sub-Saharan Africa and South Asia, including fragile settings such as South
+                        Sudan, the DRC and Northern Ethiopia. She leads multi-country evaluations to OECD-DAC
+                        standards, using contribution analysis, outcome harvesting and Most Significant Change.
+                        Her work has been delivered for or funded by the EU, Irish Aid, Global Affairs Canada and
+                        the Gates and Mastercard Foundations. Formerly at Shell Foundation and Tearfund UK.
+                        PhD, University of Birmingham.
+                    </p>
+                    <ul class="team-tags">
+                        <li>Evaluation</li>
+                        <li>GESI</li>
+                        <li>OECD-DAC</li>
+                        <li>20+ countries</li>
+                    </ul>
                 </article>
+
+                <!-- Paul -->
                 <article class="team-card">
-                    <div class="team-photo">
-                        <img src="Farai.jpg" alt="Farai">
+                    <div class="team-card__head">
+                        <div class="team-photo">
+                            <img src="Paul K. Ndungu.jpg" alt="Dr. Paul Ndungu" loading="lazy">
+                        </div>
+                        <div class="team-id">
+                            <h3>Dr. Paul Ndungu</h3>
+                            <p class="team-role">Senior Consultant</p>
+                        </div>
                     </div>
-                    <h3>Dr. Farai Jena</h3>
-                    <p class="team-role">Senior Consultant</p>
+                    <p class="team-bio">
+                        Market systems development (MSD) practitioner and evaluator with 15+ years across East
+                        Africa, designing and assessing programmes in agricultural value chains, youth
+                        entrepreneurship and organisational capability. His strength is systemic change analysis,
+                        using contribution analysis, outcome harvesting and process tracing. At Gatsby Africa
+                        (2018&ndash;2024) he built the MSD competency framework and led the Kenya Commercial Forestry
+                        Programme assessment. Earlier, at TechnoServe, he managed a Gates-funded outcomes
+                        measurement programme and led a youth entrepreneurship programme reaching 300,000
+                        young people. DBA and MBA, USIU&ndash;Africa.
+                    </p>
+                    <ul class="team-tags">
+                        <li>Market systems</li>
+                        <li>Value chains</li>
+                        <li>Youth enterprise</li>
+                        <li>Systemic change</li>
+                    </ul>
                 </article>
+
+                <!-- Farai -->
                 <article class="team-card">
-                    <div class="team-photo">
-                        <img src="Paul K. Ndungu.jpg" alt="Paul K. Ndungu">
+                    <div class="team-card__head">
+                        <div class="team-photo">
+                            <img src="Farai.jpg" alt="Dr. Farai Jena" loading="lazy">
+                        </div>
+                        <div class="team-id">
+                            <h3>Dr. Farai Jena</h3>
+                            <p class="team-role">Senior Consultant</p>
+                        </div>
                     </div>
-                    <h3>Dr. Paul Ndungu</h3>
-                    <p class="team-role">Senior Consultant</p>
+                    <p class="team-bio">
+                        Development economist with 15+ years in research, evaluation and programme management,
+                        and Visiting Professor of Economics at the University of Sussex Business School. Farai
+                        specialises in quantitative and mixed-methods analysis: designing indicators, targets and
+                        MEL frameworks, and analysing data by sex, age and social group to show who benefits and
+                        who is left behind. Clients include the World Bank, IFC, ILO, CGAP and the Commonwealth
+                        Secretariat, with work in Zimbabwe, Kenya and Ethiopia across agriculture, social
+                        protection, migration and health. Formerly Associate Dean at Sussex. PhD in Economics,
+                        Sussex.
+                    </p>
+                    <ul class="team-tags">
+                        <li>Economics</li>
+                        <li>MEL frameworks</li>
+                        <li>Quantitative analysis</li>
+                        <li>Social protection</li>
+                    </ul>
                 </article>
+
+                <!-- Cato -->
                 <article class="team-card">
-                    <div class="team-photo">
-                        <img src="image.png" alt="Cato Jaloch">
+                    <div class="team-card__head">
+                        <!-- Initials badge: swap for <img src="your-photo.jpg" alt="Cato Jaloch"> when a photo is available -->
+                        <div class="team-photo team-photo--initials" role="img" aria-label="Cato Jaloch">CJ</div>
+                        <div class="team-id">
+                            <h3>Cato Jaloch</h3>
+                            <p class="team-role">Data &amp; Digital Systems Associate</p>
+                        </div>
                     </div>
-                    <h3>Cato Jaloch</h3>
-                    <p class="team-role">Digital Systems Officer</p>
+                    <p class="team-bio">
+                        Final-year Computer Science and Informatics student at Strathmore University (graduating
+                        June 2027), bringing data analysis, software development and machine learning to
+                        ODIP&rsquo;s research and evaluation work. He has worked as a junior data analyst intern at
+                        Lima Labs and as an independent research and data analyst. His final-year project is a
+                        machine-learning weather prediction and early-warning system for Kenya, forecasting heavy
+                        rainfall, flooding and extreme temperatures, which connects to ODIP&rsquo;s climate
+                        adaptation work. Skills: Python, scikit-learn, Pandas, PostgreSQL, React and Docker.
+                    </p>
+                    <ul class="team-tags">
+                        <li>Data analysis</li>
+                        <li>Machine learning</li>
+                        <li>Python</li>
+                        <li>Dashboards</li>
+                    </ul>
                 </article>
+
             </div>
         </div>
     </section>
