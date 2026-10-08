@@ -405,6 +405,28 @@ nav a:hover { color: var(--teal); }
 
 .service-card a span { margin-left: 6px; }
 
+/* Card 02 (Research & Evidence): gold */
+.services-grid .service-card:nth-child(2) {
+    background: var(--gold);
+    color: #fff;
+    border-color: var(--gold);
+}
+.services-grid .service-card:nth-child(2) .service-index { color: #ecd9a0; }
+.services-grid .service-card:nth-child(2) .service-icon  { color: #f3e2a4; }
+.services-grid .service-card:nth-child(2) p              { color: #f6eed6; }
+.services-grid .service-card:nth-child(2) a              { color: #fff; }
+
+/* Card 04 (Partnerships & Systems): teal, same as card 01 */
+.services-grid .service-card:nth-child(4) {
+    background: var(--teal);
+    color: #fff;
+    border-color: var(--teal);
+}
+.services-grid .service-card:nth-child(4) .service-index { color: #cdb568; }
+.services-grid .service-card:nth-child(4) .service-icon  { color: #d9c17c; }
+.services-grid .service-card:nth-child(4) p              { color: #d5e3e6; }
+.services-grid .service-card:nth-child(4) a              { color: #fff; }
+
 .approach {
     background: var(--teal-dark);
     color: white;
@@ -484,7 +506,7 @@ nav a:hover { color: var(--teal); }
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 24px;
-    align-items: stretch;
+    align-items: start;
 }
 
 .team-card {
@@ -587,8 +609,7 @@ nav a:hover { color: var(--teal); }
     display: flex;
     flex-wrap: wrap;
     gap: 8px;
-    margin-top: auto;      /* pins tags to the bottom so cards line up */
-    padding-top: 22px;
+    padding-top: 20px;
 }
 
 .team-tags li {
@@ -599,6 +620,77 @@ nav a:hover { color: var(--teal); }
     background: var(--teal-soft);
     padding: 5px 12px;
     border-radius: 999px;
+}
+
+/* "Read full profile" toggle (native <details>, works without JavaScript) */
+.team-more {
+    margin-top: 22px;
+    padding-top: 18px;
+    border-top: 1px solid var(--line);
+}
+
+.team-more summary {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+    list-style: none;
+    user-select: none;
+    color: var(--teal);
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: .3px;
+    transition: color .25s ease;
+}
+
+.team-more summary::-webkit-details-marker { display: none; }
+
+.team-more summary:hover { color: var(--teal-dark); }
+
+.team-more summary:focus-visible {
+    outline: 2px solid var(--gold);
+    outline-offset: 4px;
+    border-radius: 2px;
+}
+
+/* chevron */
+.team-more summary::after {
+    content: "";
+    width: 7px;
+    height: 7px;
+    border-right: 2px solid currentColor;
+    border-bottom: 2px solid currentColor;
+    transform: rotate(45deg) translateY(-2px);
+    transition: transform .25s ease;
+}
+
+.team-more[open] summary::after { transform: rotate(-135deg) translateY(-2px); }
+
+/* swap the label when open */
+.team-more .less-label { display: none; }
+.team-more[open] .more-label { display: none; }
+.team-more[open] .less-label { display: inline; }
+
+.team-full { margin-top: 18px; }
+
+.team-full p {
+    color: var(--muted);
+    font-size: 14.5px;
+    line-height: 1.75;
+}
+
+.team-full p + p { margin-top: 14px; }
+
+.team-more[open] .team-full { animation: teamReveal .35s ease; }
+
+@keyframes teamReveal {
+    from { opacity: 0; transform: translateY(-6px); }
+    to   { opacity: 1; transform: none; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .team-more[open] .team-full { animation: none; }
+    .team-more summary::after { transition: none; }
 }
 
 .impact {
@@ -763,6 +855,8 @@ footer {
     .team-card h3 { font-size: 21px; }
     .team-role { font-size: 11px; }
     .team-bio { font-size: 14px; line-height: 1.7; }
+    .team-full p { font-size: 14px; line-height: 1.7; }
+    .team-more { margin-top: 18px; padding-top: 16px; }
     .footer-brand img { width: 150px; }
     .footer-content, .footer-bottom { flex-direction: column; }
     .footer-links { flex-wrap: wrap; }
